@@ -67,6 +67,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 아래와 같은 방법도 가능
+//        rbtn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                img.setImageResource(R.drawable.oreo);
+//            }
+//        });
+//
+//        rbtn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                img.setImageResource(R.drawable.pie);
+//            }
+//        });
+
 
     }
 
