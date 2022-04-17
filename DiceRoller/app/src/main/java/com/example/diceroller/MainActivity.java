@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
                 int randomRollResult = random.nextInt(6) + 1; // 1~6까지 랜덤으로 숫자 나옴
 
                 TextView diceResult = (TextView) findViewById(R.id.diceresult);
-                //diceResult.setText(randomRollResult); // 결과에 숫자 나타나기 -> 앱 꺼짐 (잘못된 코드 예상)
                 diceResult.setText(Integer.toString(randomRollResult)); // int형을 toString 한 후 Integer 형태로 나타내기
 
                 ImageView diceImage = (ImageView) findViewById(R.id.diceimage);
