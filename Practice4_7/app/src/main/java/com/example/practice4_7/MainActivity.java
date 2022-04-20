@@ -7,8 +7,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-// 3주차 과제
-
 public class MainActivity extends AppCompatActivity {
 
     CheckBox chk1, chk2, chk3;
