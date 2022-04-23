@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-// 기능이 추가된 초간단 계산기 앱
+// 기능이 추가된 초간단 계산기 앱 (Self4_3)
 
 public class MainActivity extends AppCompatActivity {
 
