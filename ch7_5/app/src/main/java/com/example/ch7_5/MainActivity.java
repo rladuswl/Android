@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         /*
-        토스트 xml 따로 만들지 않고 설정하는 법
+        토스트 xml 따로 만들지 않고 설정하는 법 (toast1.xml 사용 X)
         public class MainActivity extends AppCompatActivity {
             Button btn; @Override protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState); setContentView(R.layout.activity_main);
