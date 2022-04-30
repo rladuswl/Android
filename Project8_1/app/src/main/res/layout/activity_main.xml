@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
 
+    tools:context=".MainActivity">
+<!-- 실습 8-1
     <DatePicker
         android:id="@+id/datePicker1"
         android:layout_width="wrap_content"
@@ -29,5 +29,19 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="Button" />
+-->
+
+    <!-- raw 폴더 파일 처리 연습 -->
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="/res/raw에서 파일 읽기" />
+
+    <EditText
+        android:id="@+id/edtRaw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="10" />
 
 </LinearLayout>

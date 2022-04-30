@@ -13,8 +13,10 @@ import android.widget.Toast;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Calendar;
 
+/*
 public class MainActivity extends AppCompatActivity {
     DatePicker dp;
     EditText edtDiary;
@@ -35,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         int cYear = cal.get(Calendar.YEAR);
         int cMonth = cal.get(Calendar.MONTH);
         int cDay = cal.get(Calendar.DAY_OF_MONTH);
+
+        // 처음 실행시에 설정할 내용 -> 직접 풀어보기 8-1
+        fileName = Integer.toString(cYear) + "_" + Integer.toString(cMonth+1)
+                + "_" + Integer.toString(cDay) + ".txt";
+        String str = readDiary(fileName);
+        edtDiary.setText(str);
 
         dp.init(cYear, cMonth, cDay, new DatePicker.OnDateChangedListener() {
             @Override
@@ -77,5 +85,39 @@ public class MainActivity extends AppCompatActivity {
             btnWrite.setText("새로 저장");
         }
         return diaryStr;
+    }
+}
+
+*/
+
+// raw 파일 읽기
+public class MainActivity extends AppCompatActivity {
+    Button btn;
+    EditText edtRaw;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btn = (Button) findViewById(R.id.btn);
+        edtRaw = (EditText) findViewById(R.id.edtRaw);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    InputStream inputS = getResources().openRawResource(R.raw.raw_test);
+                    byte[] txt = new byte[inputS.available()];
+                    inputS.read(txt);
+                    edtRaw.setText(new String(txt));
+                    inputS.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
     }
 }
