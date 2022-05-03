@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button button1 = (Button) findViewById(R.id.button1);
 
-        //button1.setBackgroundColor(Color.WHITE);
+        button1.setBackgroundColor(Color.WHITE);
     }
 }
